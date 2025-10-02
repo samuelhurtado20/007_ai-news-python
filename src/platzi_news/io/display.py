@@ -1,6 +1,5 @@
 """Display utilities for Platzi News."""
 
-
 from rich.console import Console
 
 from ..core.models import Article
@@ -10,7 +9,6 @@ console = Console()
 
 def display_articles(articles: list[Article]) -> None:
     """Display articles in vertical format."""
-    print(f"Debug: Displaying {len(articles)} articles")  # Poor logging practice
     if not articles:
         console.print("[yellow]No se encontraron artículos.[/yellow]")
         return
