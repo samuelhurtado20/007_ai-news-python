@@ -5,7 +5,7 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main ]
-    
+
 jobs:
   uv:
     name: python
@@ -27,4 +27,8 @@ jobs:
         run: uv run mypy src
 
       - name: pytest
+        env:
+          GUARDIAN_API_KEY: "this-is-not-a-api-key"
+          NEWSAPI_API_KEY: "this-is-not-a-api-key"
+          OPENAI_API_KEY: "this-is-not-a-api-key"
         run: uv run pytest -n auto
