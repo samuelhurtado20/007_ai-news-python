@@ -2,7 +2,7 @@ import asyncio
 import logging
 import time
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 
 async def tarea(nombre: str, segundos: int) -> str:
@@ -31,4 +31,14 @@ async def main() -> None:
     print("Resultados:", resultados)
 
 
-asyncio.run(main())
+# asyncio.run(main())
+
+my_loop = asyncio.new_event_loop()
+my_loop.set_debug(True)
+asyncio.set_event_loop(loop=my_loop)
+
+
+try:
+    my_loop.run_until_complete(main())
+finally:
+    my_loop.close()
