@@ -1,0 +1,118 @@
+COMANDOS DE UV PARA POWERSHELL
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+$env:Path = "C:\Users\developer\.local\bin;$env:Path"
+
+uv --version
+
+uv venv .venv
+
+.venv\Scripts\activate
+
+uv pip install -e .
+
+======================================================
+git clone 
+cd folder
+code -r .
+
+pip install uv
+
+python.exe -m pip install --upgrade pip
+
+uv venv
+
+uv pip install -e .
+=================================================================
+
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+To add C:\Users\developer\.local\bin to your PATH, either restart your shell or run:
+
+    set Path=C:\Users\developer\.local\bin;%Path%   (cmd)
+    $env:Path = "C:\Users\developer\.local\bin;$env:Path"   (powershell)
+uv --version
+uv init .
+uv venv .venv
+.venv\Scripts\activate
+
+uv add azure-functions 
+ uv add httpx    
+uv add azure-data-tables
+uv add pytest>=7.0.0   
+uv add pytest-cov>=4.0.0 
+uv add pytest-mock>=3.10.0
+uv add pytest-asyncio>=0.21.0      
+
+
+uv pip list
+uv pip freeze
+
+uv pip freeze > requirements.txt
+
+
+
+
+uv pip install -e .
+
+
+==================================================================
+uv add --dev ruff
+ruff format .
+
+
+uv add --dev mypy
+mypy src
+
+uv add --dev types-requests
+==================================================================
+
+# type: ignore[call-args]
+
+uv add --dev lxml 
+
+mypy src --html-report=html
+
+
+RUFF check
+
+ruff check --fix
+ruff check --watch
+ruff check path/to/file.py
+
+==================================================================
+
+https://github.com/platzi/python-platzi-news/tree/c0353e78341f699043a606a75342998d1c5201f4#
+
+https://newsapi.org/account https://platform.openai.com/api-keys https://open-platform.theguardian.com/
+
+https://github.com/platzi/python-platzi-news.git
+https://github.com/platzi/python-platzi-news.git
+
+
+
+
+==================================================================
+
+azure-functions
+httpx
+azure-data-tables
+
+# Testing dependencies
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+pytest-asyncio>=0.21.0
+
+
+==================================================================
+mkdir <repo-name>
+cd <repo-name>
+git init
+
+
+git remote add origin https://github.com/platzi/python-platzi-news.git
+git fetch origin c0353e78341f699043a606a75342998d1c5201f4
+
+
+git checkout FETCH_HEAD
+git checkout -b develop c0353e78341f699043a606a75342998d1c5201f4
