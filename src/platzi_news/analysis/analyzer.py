@@ -42,7 +42,7 @@ class OpenAIAnalyzer:
         """
         logger = logging.getLogger(__name__)
         logger.debug(f"Analyzing {len(articles)} articles with question: {question}")
-
+        variable = None
         if not articles:
             logger.warning("No articles found to analyze")
             return "No se encontraron artículos para analizar."

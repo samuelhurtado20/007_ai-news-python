@@ -19,12 +19,13 @@ dependencies = [
 [project.scripts]
 platzi-news = "platzi_news.main:main"
 
-[dependency-groups]
-dev = [
-    "ruff>=0.13.2",
-]
-
 [tool.ruff]
 extend-exclude = [
     "src/platzi_news/do_not_format"
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.0",
+    "ruff>=0.13.2",
 ]

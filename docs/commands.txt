@@ -26,6 +26,7 @@ uv pip install -e .
 =================================================================
 
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 To add C:\Users\developer\.local\bin to your PATH, either restart your shell or run:
 
     set Path=C:\Users\developer\.local\bin;%Path%   (cmd)
@@ -60,10 +61,24 @@ uv add --dev ruff
 ruff format .
 
 
+
 uv add --dev mypy
+uv add --dev mypy==1.11.2
+uv add --dev types-requests
 mypy src
 
 uv add --dev types-requests
+
+
+[mypy]
+ignore_missing_imports = true
+packages = src
+exclude = [".venv/", "venv/"]
+==================================================================
+[tool.ruff]
+extend-exclude = [
+    "src/platzi_news/do_not_format"
+]
 ==================================================================
 
 # type: ignore[call-args]
