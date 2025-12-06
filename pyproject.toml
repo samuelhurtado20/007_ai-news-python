@@ -26,6 +26,11 @@ extend-exclude = [
 
 [dependency-groups]
 dev = [
+    "lxml>=6.0.2",
     "mypy>=1.19.0",
     "ruff>=0.13.2",
 ]
+
+[tool.mypy]
+packages = ["platzi_news"]
+

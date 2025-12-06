@@ -67,6 +67,8 @@ uv add --dev mypy==1.11.2
 uv add --dev types-requests
 mypy src
 
+uv add --dev lxml
+
 uv add --dev types-requests
 
 
@@ -79,6 +81,9 @@ exclude = [".venv/", "venv/"]
 extend-exclude = [
     "src/platzi_news/do_not_format"
 ]
+==================================================================
+
+
 ==================================================================
 
 # type: ignore[call-args]
