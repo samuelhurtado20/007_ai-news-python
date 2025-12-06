@@ -4,9 +4,9 @@
 <link rel="stylesheet" type="text/css" href="../../../../mypy-html.css">
 </head>
 <body>
-<h2>platzi_news.sources.guardian</h2>
+<h2>src.platzi_news.sources.guardian</h2>
 <table>
-<caption>src/platzi_news/sources/guardian.py</caption>
+<caption>src\platzi_news\sources\guardian.py</caption>
 <tbody><tr>
 <td class="table-lines"><pre><span id="L1" class="lineno"><a class="lineno" href="#L1">1</a></span>
 <span id="L2" class="lineno"><a class="lineno" href="#L2">2</a></span>
@@ -91,7 +91,8 @@
 <span class="line-precise" title="No Anys on this line!">        logger = logging.getLogger(__name__)</span>
 <span class="line-precise" title="No Anys on this line!">        logger.debug(f"Fetching articles from The Guardian for query: {query}")</span>
 <span class="line-empty" title="No Anys on this line!"></span>
-<span class="line-precise" title="No Anys on this line!">        params: dict[str, str | int] = {</span>
+<span class="line-imprecise" title="Any Types on this line: 
+Omitted Generics (x2)">        params: dict = {</span>
 <span class="line-precise" title="No Anys on this line!">            "q": query,</span>
 <span class="line-precise" title="No Anys on this line!">            "api-key": self.api_key,</span>
 <span class="line-precise" title="No Anys on this line!">            "show-fields": "headline,trailText,shortUrl",</span>
@@ -100,7 +101,8 @@
 <span class="line-empty" title="No Anys on this line!">        try:</span>
 <span class="line-precise" title="No Anys on this line!">            logger.debug("Making request to The Guardian API")</span>
 <span class="line-precise" title="No Anys on this line!">            response = requests.get(</span>
-<span class="line-precise" title="No Anys on this line!">                self.BASE_URL, params=params, timeout=settings.request_timeout</span>
+<span class="line-imprecise" title="Any Types on this line: 
+Omitted Generics (x2)">                self.BASE_URL, params=params, timeout=settings.request_timeout</span>
 <span class="line-empty" title="No Anys on this line!">            )</span>
 <span class="line-precise" title="No Anys on this line!">            response.raise_for_status()</span>
 <span class="line-any" title="Any Types on this line: 

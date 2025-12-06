@@ -26,7 +26,7 @@ class GuardianAPI(NewsSource):
 
         logger.debug(f"Fetching articles from The Guardian for query: {query}")
 
-        params: dict[str, str | int] = {
+        params: dict = {
             "q": query,
             "api-key": self.api_key,
             "show-fields": "headline,trailText,shortUrl",
