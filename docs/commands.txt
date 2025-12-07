@@ -92,6 +92,7 @@ pre-commit install
 git status
 git add .
 git commit -m "Intento fallido pre commit"
+git commit -m "Intento fallido pre commit" --no-verify
 
 ==================================================================
 
