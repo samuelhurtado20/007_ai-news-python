@@ -30,6 +30,7 @@ extend-exclude = [
 dev = [
     "lxml>=6.0.2",
     "mypy>=1.19.0",
+    "pytest>=9.0.2",
     "ruff>=0.13.2",
 ]
 
@@ -46,3 +47,8 @@ select = [
     "I",
     "S",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+pythonpath = ["src"]

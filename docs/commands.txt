@@ -94,6 +94,31 @@ git add .
 git commit -m "Intento fallido pre commit"
 git commit -m "Intento fallido pre commit" --no-verify
 
+uv add --dev pytest-cov
+
+pytest --cov=src --cov-report=html
+
+uv add --dev pytest-xdist
+
+pytest -n auto
+
+pytest --cov=src --cov-report=html -n auto -v
+
+==================================================================
+git switch -c fix-pep8
+
+==================================================================
+
+
+
+
+
+
+del uv.lock
+uv lock
+
+uv add --dev pytest
+
 ==================================================================
 
 # type: ignore[call-args]
