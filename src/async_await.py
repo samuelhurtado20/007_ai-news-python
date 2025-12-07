@@ -44,5 +44,5 @@ finally:
     my_loop.close()
 
 
-""" Salida esperada:fdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+""" Salida esperada:fddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 fddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddg"""
