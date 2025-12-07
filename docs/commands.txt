@@ -12,7 +12,7 @@ uv venv .venv
 uv pip install -e .
 
 ======================================================
-git clone 
+git clone
 cd folder
 code -r .
 
@@ -36,13 +36,13 @@ uv init .
 uv venv .venv
 .venv\Scripts\activate
 
-uv add azure-functions 
- uv add httpx    
+uv add azure-functions
+ uv add httpx
 uv add azure-data-tables
-uv add pytest>=7.0.0   
-uv add pytest-cov>=4.0.0 
+uv add pytest>=7.0.0
+uv add pytest-cov>=4.0.0
 uv add pytest-mock>=3.10.0
-uv add pytest-asyncio>=0.21.0      
+uv add pytest-asyncio>=0.21.0
 
 
 uv pip list
@@ -83,12 +83,21 @@ extend-exclude = [
 ]
 ==================================================================
 
+uv add --dev pre-commit
+uv tool install pre-commit --with pre-commit-uv --force-reinstall
+
+pre-commit
+pre-commit install
+
+git status
+git add .
+git commit -m "Intento fallido pre commit"
 
 ==================================================================
 
 # type: ignore[call-args]
 
-uv add --dev lxml 
+uv add --dev lxml
 
 mypy src --html-report=html
 
