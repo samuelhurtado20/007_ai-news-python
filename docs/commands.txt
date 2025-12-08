@@ -138,8 +138,28 @@ uv add --dev pytest
 uv add httpx
 
 
+Makefile
+install:
+	@echo "Instalando paquetes"
+	uv sync
+
+run:
+	uv pip install .
+	platzi-news --log-level DEBUG search "tecnología" --source newsapi
+
+
+publish:
+	uv publish --index testpypi --username __token__ --password NUNCA_PUBLICAR_CLAVES
+
 
 ==================================================================
+==================================================================
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+uv build
 ==================================================================
 ==================================================================
 
