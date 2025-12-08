@@ -93,7 +93,9 @@ git status
 git add .
 git commit -m "Intento fallido pre commit"
 git commit -m "Intento fallido pre commit" --no-verify
-
+==================================================================
+==================================================================
+==================================================================
 uv add --dev pytest-cov
 
 pytest --cov=src --cov-report=html
@@ -107,11 +109,22 @@ pytest --cov=src --cov-report=html -n auto -v
 ==================================================================
 git switch -c fix-pep8
 
+rich.console
+
+
+
+
 ==================================================================
+python -m cProfile -m platzi_news.main search "tecnologia" --source newsapi
+
+uv add --dev snakeviz
+python -m cProfile -o platzi_news.prof -m platzi_news.main search "tecnologia" --source newsapi
+snakeviz platzi_news.prof
 
 
-
-
+==================================================================
+==================================================================
+==================================================================
 
 
 del uv.lock
@@ -119,6 +132,15 @@ uv lock
 
 uv add --dev pytest
 
+==================================================================
+==================================================================
+==================================================================
+uv add httpx
+
+
+
+==================================================================
+==================================================================
 ==================================================================
 
 # type: ignore[call-args]
@@ -171,3 +193,17 @@ git fetch origin c0353e78341f699043a606a75342998d1c5201f4
 
 git checkout FETCH_HEAD
 git checkout -b develop c0353e78341f699043a606a75342998d1c5201f4
+
+
+
+==================================================================
+==================================================================
+==================================================================
+==================================================================
+dame una guia para crear una pequena api para crud de users, roles, and permision, login token jwt.
+usar ruff, mypy, pytest, gestor de enviroment uv
+** dame todos los pasos a ejecutar en orden
+** comandos a ejecutar en la terminal
+** framework: fastApi, postgres,
+** ready para ejecutar o levantar en docker
+**
